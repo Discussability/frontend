@@ -1,8 +1,6 @@
 let back1 = document.getElementById('back1');
 let back2 = document.getElementById('back2');
 let back3 = document.getElementById('back3');
-let elem = document.getElementById('textBox');
-let box = elem.getBoundingClientRect();
 
 window.addEventListener('scroll', () => {
     if (window.scrollY + box.height+50 < box.bottom) {
@@ -14,4 +12,17 @@ window.addEventListener('scroll', () => {
     }
 });
 
+var activeLink = null;
+function toggleBackground(event) {
+  var clickedLink = event.target;
+  if (activeLink !== null) {
+    activeLink.classList.remove('active');
+  }
+  if (activeLink !== clickedLink) {
+    clickedLink.classList.add('active');
+    activeLink = clickedLink;
+  } else {
+    activeLink = null;
+  }
+}
 
