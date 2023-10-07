@@ -15,6 +15,7 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
 let text = document.getElementById('text');
 let text2 = document.getElementById('text2');
 let back1 = document.getElementById('back1');
