@@ -7,7 +7,7 @@
 
 <head>
     <title>
-        Forums
+        Discussability
     </title>
 </head>
 <body>
@@ -16,10 +16,33 @@
 <div id="wrapper">
 
 <!-- Header -->
+</script>
     <header>
+        <button class="open-button" onclick="openForm()">LOGIN</button>
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Login</h1>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn">Login</button>
+                <a class="close-icon"><span class="material-icons" onclick="closeForm()">close</span></a>
+        </div>
+        <script>
+            function openForm() {
+                document.getElementById("myForm").style.display = "block";
+            }
+            
+            function closeForm() {
+              document.getElementById("myForm").style.display = "none";
+            }
+        </script>
         <nav class="home">
             <ul>
-                <button class="open-button" onclick="openForm()">CREATE ACCOUNT</button>
                 <a href="index.html" class="header-link" onclick="toggleBackground(this)">HOME</a>
                 <a href="forum.html" class="header-link" onclick="toggleBackground(this)">FORUM</a>
                 <a href="forum/resume.pdf" class="header-link" onclick="toggleBackground(this)">RESOURCES</a>
@@ -37,8 +60,14 @@
         <img src="images/cloud3.png" id="back3">
     </section>
 
-<!--  -->
-
+<!-- Body -->
+    <section class="welcome">
+        <h1><bold>Forums</bold></span></h1>
+        <p>Lorem ipsum dolor sit amet, cum corpora ancillae deleniti 
+            ad, eam apeirian ocurreret cu. Ius elit verear in. Mel 
+            nibh simul in, pro ad vide saepe. Duo te munere delectus 
+            posidonium.</p>
+    </section>
 
 <!-- FOOTER -->
 <footer>
